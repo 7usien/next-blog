@@ -1,8 +1,11 @@
+import Grid from "@/components/Grid/Grid";
 import PostItem from "@/components/PostItem/PostItem";
 
 export default async function Home() {
  const fetchData = async () => {
-  const response = await fetch(`${process.env.NEXT_APP_POSTS_API}`);
+   const response = await fetch(`${process.env.NEXT_APP_POSTS_API}`, {
+    cache: "no-cache",
+  });
   const data = await response.json();
 
   if (!response.ok) {
@@ -17,9 +20,11 @@ export default async function Home() {
 
  return (
   <main className="w-[1400px] m-auto p-4">
-   {data.map((post) => (
-    <PostItem key={post.id} {...post} />
-   ))}
+   <Grid count={5}>
+    {data.map((post) => (
+     <PostItem key={post.id} {...post} />
+    ))}
+   </Grid>
   </main>
  );
 }
