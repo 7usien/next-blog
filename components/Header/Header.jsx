@@ -63,8 +63,10 @@ const Header = async () => {
 
       {pages.data.map((page) => (
        <li key={page.id}>
-        <AiFillInfoCircle className="inline mr-1 align-middle" />
-        {page.attributes.name}
+          <AiFillInfoCircle className="inline mr-1 align-middle" />
+          <Link href={`/pages/${page.attributes.slug}`}>
+            {page.attributes.name}
+            </Link>
        </li>
       ))}
      </ul>
