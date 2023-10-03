@@ -20,7 +20,7 @@ export default async function Home() {
 
  return (
   <main className="w-[1400px] m-auto p-4">
-   <Grid count={5}>
+   <Grid count={4}>
     {data.map((post) => (
      <PostItem key={post.id} {...post} />
     ))}

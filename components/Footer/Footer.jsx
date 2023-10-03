@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
  return (
-  <div className="bg-cyan-800 text-white p-4 capitalize text-center relative">
+  <div className="bg-slate-800 text-white p-4 capitalize text-center relative">
    All rights are reserved to techy Blog project 2023
    <ul className="flex gap-2 m-auto justify-center leading-relaxed text-orange-300">
     <li>based on tech : </li>
