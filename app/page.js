@@ -16,7 +16,11 @@ export default async function Home() {
  };
 
  const { data } = await fetchData();
- console.log(data);
+ 
+  
+  
+  
+  
 
  return (
   <main className="w-[1400px] m-auto p-4">

@@ -3,7 +3,6 @@ import {
  AiFillDownSquare,
  AiFillHome,
  AiFillInfoCircle,
- AiFillPhone,
  AiOutlineBlock,
 } from "react-icons/ai";
 
@@ -48,10 +47,11 @@ const Header = async () => {
        categories
        <div className="absolute opacity-0 bg-slate-900 mt-2 w-60  shadow-lg top-[50px] left-0 b group-hover:opacity-100 ">
         <ul>
-         {cats.data.map((cat) => {
-          return (
+                 {cats.data.map((cat) => {
+           return (
+             
            <li className="px-4 py-2 border hover:bg-slate-950  " key={cat.id}>
-            <Link href="" className="text-white hover:text-yellow-700">
+            <Link href={`/category/${cat.attributes.name}`} title={cat.attributes.name}className="text-white hover:text-yellow-700">
              {cat.attributes.name}
             </Link>
            </li>
@@ -64,7 +64,7 @@ const Header = async () => {
       {pages.data.map((page) => (
        <li key={page.id}>
           <AiFillInfoCircle className="inline mr-1 align-middle" />
-          <Link href={`/pages/${page.attributes.slug}`}>
+          <Link  href={`/pages/${page.attributes.slug}`}>
             {page.attributes.name}
             </Link>
        </li>
