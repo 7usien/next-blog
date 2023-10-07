@@ -13,7 +13,7 @@ const PostItem = ({id, attributes}) => {
       <span className='absolute top-3 right-4 text-white'>
       {cat}
       </span>
-      <Image className='w-full' src={`http://localhost:1337${thumbnail.data.attributes.url}`} width={200} height={200} />
+      <Image className='w-full' src={`http://localhost:1337${thumbnail.data.attributes.url}`} width={200} height={200} alt={`photo for ${title}`} />
       <h2 className='w-full  absolute bottom-0 left-0 bg-slate-800 text-white p-3 text-xl'> <Link href={`/posts/${slug}`}>{title}</Link></h2>
      </div>
   )

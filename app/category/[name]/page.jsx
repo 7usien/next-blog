@@ -14,8 +14,8 @@ const page = async ({ params }) => {
  const { data } = await getCatPosts();
 
  return (
-  <div>
-   <h3>{name}</h3>
+  <div className="w-[1400px] m-auto py-6">
+   <h3 className="text-center text-3xl mb-4">Category : {name}</h3>
    <Grid>
     {data.map((post) => {
      return <PostCategory key={post.id} {...post} />;

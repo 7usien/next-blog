@@ -690,10 +690,10 @@ export interface ApiPagePage extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String;
-    slug: Attribute.String;
     order: Attribute.String;
     content: Attribute.RichText;
     thumbnail: Attribute.Media;
+    slug: Attribute.UID<'api::page.page', 'name'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -710,13 +710,13 @@ export interface ApiPostPost extends Schema.CollectionType {
     singularName: 'post';
     pluralName: 'posts';
     displayName: 'post';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    slug: Attribute.Text & Attribute.Required;
     content: Attribute.RichText;
     date: Attribute.Date;
     thumbnail: Attribute.Media;
@@ -725,6 +725,7 @@ export interface ApiPostPost extends Schema.CollectionType {
       'manyToOne',
       'api::post-category.post-category'
     >;
+    slug: Attribute.UID<'api::post.post', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
