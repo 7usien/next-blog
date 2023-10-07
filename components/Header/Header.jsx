@@ -5,6 +5,7 @@ import {
  AiFillInfoCircle,
  AiOutlineBlock,
 } from "react-icons/ai";
+import SearchInput from "../Search/SearchInput";
 
 const Header = async () => {
  const fetchCats = async () => {
@@ -72,10 +73,7 @@ const Header = async () => {
      </ul>
     </nav>
 
-    <div className="search">
-     <input type="text" className="p-2" placeholder="search a blog .." />
-     <button className="bg-slate-700 p-2">search</button>
-    </div>
+   <SearchInput />
    </div>
   </div>
  );
