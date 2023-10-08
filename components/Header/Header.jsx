@@ -5,7 +5,7 @@ import {
  AiFillInfoCircle,
  AiOutlineBlock,
 } from "react-icons/ai";
-import SearchInput from "../Search/SearchInput";
+import SearchInput from "../SearchInput/SearchInput";
 
 const Header = async () => {
  const fetchCats = async () => {
