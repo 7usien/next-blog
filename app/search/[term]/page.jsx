@@ -34,7 +34,7 @@ const page = ({params}) => {
 
   return (
     <div  className="m-auto w-[1400px] p-6">
-      <h3 className="text-2xl capitalize">search about  : {term}</h3>
+      <h3 className="text-3xl text-center capitalize mb-5">search about  : {term}</h3>
     
       <Grid>
 
